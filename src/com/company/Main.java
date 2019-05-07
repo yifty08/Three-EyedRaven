@@ -1,5 +1,6 @@
 package com.company;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -17,19 +18,26 @@ public class Main {
         positive.addAll(Arrays.asList("mad", "bad", "sad", "tired", "angry",
                 "anxious", "hungry", "moody", "afraid"));
 
-        Scanner scanner = new Scanner(System.in);
-        String answer = "";
 
         System.out.print("Hi I'm Raven, Eliza's Emo cousin." +
                 " How are you feeling today? ");
 
+        Scanner scanner = new Scanner(System.in);
+        String answer = "";
+
         int posCounter = 0;
         int nagCounter = 0;
+
+//        ArrayList<History> answers = new ArrayList<>();
+        History chatHistory = new History();
 
         while (!(answer.equalsIgnoreCase("q"))){
 
             System.out.println("Enter your response here or q to quit: ");
             answer = scanner.nextLine();
+//            answers.add(answer);
+            chatHistory.addHistory(answer);
+
 //            System.out.println(answer);
 
             for (String a : answer.split(" ")) {
@@ -60,6 +68,8 @@ public class Main {
 //            System.out.println(posCounter);
 //            System.out.println(nagCounter);
         }
+
+        System.out.println(chatHistory.printHistory());
 
 
     }
