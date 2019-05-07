@@ -15,7 +15,7 @@ public class Main {
 //        System.out.println(positive);
 
         ArrayList<String> nagative = new ArrayList<>();
-        positive.addAll(Arrays.asList("mad", "bad", "sad", "tired", "angry",
+        nagative.addAll(Arrays.asList("mad", "bad", "sad", "tired", "angry",
                 "anxious", "hungry", "moody", "afraid"));
 
 
@@ -57,6 +57,8 @@ public class Main {
 
                 }
             }
+
+
 
             if (posCounter > nagCounter){
                 System.out.println("I am so happy you are happy!!");
